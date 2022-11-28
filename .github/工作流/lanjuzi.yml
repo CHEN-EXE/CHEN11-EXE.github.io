@@ -1,0 +1,600 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta content="SB编程,XXS编程,NN编程,老八学编程,擦你们编程,没德编程" name="keywords">
+    <title>烂橘SB编程-官方吃席</title>
+    <link rel="icon" href="../../images/juhome.png" type="image/x-icon" />
+    <link type="text/css" rel="stylesheet" href="/css/main.css" />
+    <link type="text/css" media="screen" rel="stylesheet" href="/lib/FlexSlider/flexslider.css" />
+    <style>
+        button, div, input, textarea {
+            outline: 0;
+            padding: 0;
+            border: 0;
+        }
+    </style>
+    <script type="text/javascript">
+        //function t() {
+        //    try {
+        //        var a = ["r", "e", "g", "g", "u", "b", "e", "d"].reverse().join("");
+        //        ! function e(n) {
+        //            (1 !== ("" + n / n).length || 0 === n) && function () { }
+        //                .constructor(a)(),
+        //                e(++n)
+        //        }(0)
+        //    } catch (a) {
+        //        setTimeout(t, 500)
+        //    }
+        //};
+        //t();
+
+        //document.onkeydown = function () {
+        //    var e = window.event || arguments[0];
+        //    if (e.keyCode == 123) {
+        //        //alert("F12 被管理员禁用");
+        //        return false;
+        //    }
+        //}
+    </script>
+    
+    <style>
+
+
+        .myscroll::-webkit-scrollbar {
+            /*滚动条整体样式*/
+            width: 5px; /*高宽分别对应横竖滚动条的尺寸*/
+            height: 1px;
+        }
+
+        .myscroll::-webkit-scrollbar-thumb {
+            /*滚动条里面小方块*/
+            border-radius: 10px;
+            box-shadow: inset 0 0 5px #623C2E;
+            background: #535353;
+        }
+
+        .myscroll::-webkit-scrollbar-track {
+            /*滚动条里面轨道*/
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            background: #ededed;
+        }
+        .r-publish--publish_tag_item {
+            height: 24px;
+            border-radius: 2px;
+            display: inline-block;
+            text-align: center;
+            margin-right: 10px;
+            margin-bottom: 12px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            cursor: pointer
+        }
+
+            .r-publish--publish_tag_item.r-publish--selected {
+                background: #2196F3;
+                color: #fff;
+                border: 1px solid #2196F3;
+                margin-right: 10px;
+            }
+
+                .r-publish--publish_tag_item.r-publish--selected span {
+                    color: #fff
+                }
+
+            .r-publish--publish_tag_item:hover span {
+                color: #2196F3
+            }
+
+            .r-publish--publish_tag_item span {
+                font-size: 11px;
+                color: #aeaeae;
+                line-height: 24px
+            }
+
+        .r-community-c-forum_sender--form_item .r-community-c-forum_sender--select_area span {
+            display: inline-block;
+            padding: 0 20px;
+            border-radius: 0;
+            margin-bottom: 10px;
+            margin-right: 0;
+            border: 1px solid hsla(0,0%,40%,.28);
+            color: #999;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+
+
+    <script type="text/javascript" src="/lib/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="/js/pub/pubFun.js"></script>
+    <script type="text/javascript" src="/js/qj_globalvar.js"></script>
+    <script type="text/javascript" src="/js/pub/AjaxRequest.js"></script>
+    <script type="text/javascript" src="/js/portal.js"></script>
+    <script type="text/javascript" src="/js/webMainComEx.js"></script>
+
+    
+    <script type="text/javascript" src="../../lib/wangEditor/wangEditor.js"></script>
+
+
+
+</head>
+<body style="margin: 0px; background-color: #f9f9f9;">
+    <div id="body_firstmain" >
+        
+
+
+
+<div id="div_mainmune"></div>
+
+<div class="r-index--main_cont">
+    <div class="r-community--container">
+        
+        <div class="r-community--left_board_container">
+            <div id="bbs_column">
+
+            </div>
+        </div>
+        <div class="r-community--middle_content_container">
+            <div class="r-community--content_container">
+                <div class="r-community--forum_list">
+                    <div class="r-community--forum_filter">
+                        <button class="r-community--filter_tab r-community--active">最新回复<span></span></button>
+                        
+                    </div>
+                    <div id="div_bbslist">
+                    </div>
+                    <div class="r-community--page_contianer">
+                        <div id="div_splitpage"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="r-community--right_search_container">
+            <div class="r-community--search_container">
+                <div class="r-community--search_form"><input id="search_input" type="text" placeholder="搜索帖子" readonly="readonly" onfocus="$(this).removeAttr('readonly');"><span class="r-community--search_btn"><i class="r-community--icon_search"></i></span></div>
+                <div class="r-community--my_options"><a id="my-bbs" class="r-community--option"><i class="r-community--icon_my_sended"></i><p>我的帖子</p></a><a id="my-revert" class="r-community--option"><i class="r-community--icon_my_replies"></i><p>我回复的</p></a></div>
+                <a class="r-community--send_btn"><i class="r-community--icon_send_forum"></i>发布帖子</a>
+                <a href="http://www.qianjugo.com/Main/BBSDetail?bbsguid=6dff9764-e5b4-4083-9093-9746199057ab" target="_blank" class="r-community--roules_btn">论坛守则＞</a>
+                <div class="r-community--my_options" style="display: block;height:322px;overflow: hidden;">
+                    <div style="width: 100%;text-align: center;display:block;border-bottom:1px solid #f3f3f3;">版主</div>
+                    <div id="div_banzhulist" style="width: 100%;height:300px;display:block;line-height:35px;background: #fff;overflow-x: hidden;overflow-y: scroll;" class="myscroll">
+
+                    </div>
+                </div>
+                <div class="r-community--my_options" style="display: block;height:322px;overflow: hidden;">
+                    <div id="div_hwlist" style="width: 100%;text-align: center;display:block;border-bottom:1px solid #f3f3f3;">小黑屋名单:</div>
+                    <div id="div_beijinlist" style="width: 100%;height:300px;display:block;line-height:35px;background: #fff;overflow-x: hidden;overflow-y: scroll;" class="myscroll">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="div_container_bbs" class="c-model_box--dialog_wrap c-model_box--visiable c-model_box--show" style="display:none;">
+            <div class="c-model_box--dialog_cover"></div>
+            <div class="c-model_box--content_wrap">
+                <div class="c-model_box--content_box">
+                    <div class="c-model_box--title"><span>吃席</span><a class="c-model_box--close" onclick="$('#div_container_bbs').hide();"><i></i></a></div>
+                    <div class="r-community-c-forum_sender--container">
+                        <div class="r-community-c-forum_sender--form_item"><input type="text" maxlength="50" placeholder="SB" class="r-community-c-forum_sender--title_input"></div>
+                        <div class="r-community-c-forum_sender--form_item">
+                            <div id="div_wangeditor" style="height:332px;width:878px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="r-community-c-forum_sender--form_item">
+                        <p class="r-community-c-forum_sender--select_tips">千桔是SB</p>
+                        <div id="column_container" class="r-community-c-forum_sender--select_area" style="height:80px;padding: 0 30px 0;">
+                            <div id="selettype">
+                            </div>
+                        </div>
+                        <input type="hidden" id="hid_columid_selected" name="" value="">
+                        <div class="r-community-c-forum_sender--bottom_options"><a class="r-community-c-forum_sender--option">发布</a></div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div id="softreginfo"></div>
+<div id="div_userlogin"></div>
+
+<script type="text/javascript">
+    var jq_column = new Array();
+    function typeclick(divobject) {
+        for (var i = 0; i < jq_column.length; i++) {
+            jq_column[i].attr("class", "r-publish--publish_tag_item");
+        }
+
+        var jq_div = $(divobject);
+
+        if (jq_div.attr("class") == "r-publish--publish_tag_item") {
+            jq_div.attr("class", "r-publish--publish_tag_item r-publish--selected");
+        } else {
+            jq_div.attr("class", "r-publish--publish_tag_item");
+        }
+        //if (_selecttype.containsKey(divobject.id)) {
+        //    _selecttype.remove(divobject.id);
+        //    $(divobject).removeClass("r-publish--selected");
+        //} else {
+        //    if (_selecttype.getSize() >= 3) {
+        //        alert("千桔是SB!");
+        //        return;
+        //    }
+        //_selecttype.add(divobject.id, divobject.innerText);
+
+        //$(divobject).addClass("r-publish--selected");
+        //}
+    }
+
+    function sendvalid() {
+        for (var i = 0; i < jq_column.length; i++) {
+            if (jq_column[i].attr("class") == "r-publish--publish_tag_item r-publish--selected")
+                return jq_column[i].attr("id");
+        }
+        return "";
+    }
+
+
+    var E = window.wangEditor;
+    var editor = new E('#div_wangeditor');
+    editor.customConfig.emotions = [{
+        title: '默认',// tab 的标题
+        type: 'image',// type -> 'emoji' / 'image'
+        content: [
+            {
+                alt: '[坏笑]',
+                src: '../../images/editor/pcmoren_huaixiao_org.png'
+            },
+            {
+                alt: '[舔屏]',
+                src: '../../images/editor/pcmoren_tian_org.png'
+            },
+            {
+                alt: '[污]',
+                src: '../../images/editor/pcmoren_wu_org.png'
+            },
+            {
+                alt: '[允悲]',
+                src: '../../images/editor/moren_yunbei_org.png'
+            }],
+        title: '新浪',// tab 的标题
+        type: 'image', // type -> 'emoji' / 'image'
+        content: [// content -> 数组
+            {
+                src: '../../images/editor/shenshou_thumb.gif',
+                alt: '[草泥马]'
+            },
+            {
+                src: '../../images/editor/horse2_thumb.gif',
+                alt: '[神马]'
+            },
+            {
+                src: '../../images/editor/fuyun_thumb.gif',
+                alt: '[浮云]'
+            }]
+    },
+    {
+        // tab 的标题
+        title: 'emoji',
+        type: 'emoji',// type -> 'emoji' / 'image'
+        // content -> 数组
+        content: '😀 😃 😄 😁 😆 😅 😂 😊 😇 🙂 🙃 😉 😌 😍 😘 😗 😙 😚 😋 😜 😝 😛 🤑 🤗 🤓 😎 😏 😒 😞 😔 😟 😕 🙁  😣 😖 😫 😩 😤 😠 😡 😶 😐 😑 😯 😦 😧 😮 😲 😵 😳 😱 😨 😰 😢 😥 😭 😓 😪 😴 🙄 🤔 😬 🤐'.split(/\s/)
+    },
+    {
+        // tab 的标题
+        title: 'emoji手势',
+        // type -> 'emoji' / 'image'
+        type: 'emoji',
+        // content -> 数组
+        content: ['🙌', '👏', '👋', '👍', '👎', '👊', '✊', '️👌', '✋', '👐', '💪', '🙏', '️👆', '👇', '👈', '👉', '🖕', '🖐', '🤘']
+    }
+    ]
+
+    //开启debug模式
+    editor.customConfig.debug = true;
+    // 关闭粘贴内容中的样式
+    editor.customConfig.pasteFilterStyle = false
+    // 忽略粘贴内容中的图片
+    editor.customConfig.pasteIgnoreImg = true
+    // 使用 base64 保存图片
+    //editor.customConfig.uploadImgShowBase64 = true
+    // 上传图片到服务器
+    //editor.customConfig.uploadFileName = 'myFile'; //设置文件上传的参数名称
+    editor.customConfig.uploadImgServer = '../../jason/UpdateImage'; //设置上传文件的服务器路径
+    editor.customConfig.uploadImgMaxSize = 10 * 1024 * 1024; // 将图片大小限制为 1M
+    editor.customConfig.uploadImgMaxLength = 10;//最大上传图片数
+    editor.customConfig.uploadImgTimeout = 10000;//上传超时 10000000000秒
+    editor.customConfig.uploadHeaders = {
+        'Accept': 'text/x-json'
+    };
+    editor.customConfig.uploadImgHooks = {
+        before: function (xhr, editor, files) {
+            // 图片上传之前触发
+            // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，files 是选择的图片文件
+
+            // 如果返回的结果是 {prevent: true, msg: 'xxxx'} 则表示用户放弃上传
+            // return {
+            //     prevent: true,
+            //     msg: '放弃上传'
+            // }
+        },
+        success: function (xhr, editor, result) {
+            // 图片上传并返回结果，图片插入成功之后触发
+            // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果
+            //insert(imgUrl)
+            //alert("上传成功!");
+        },
+        fail: function (xhr, editor, result) {
+            // 图片上传并返回结果，但图片插入错误时触发
+            // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果
+        },
+        error: function (xhr, editor) {
+            // 图片上传出错时触发
+            // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象
+        }
+
+    };
+
+    editor.create();
+
+    //设置内容
+    //editor.txt.html('<p>用 JS 设置的内容</p>')
+    // 读取 html
+    //alert(editor.txt.html())
+    // 读取 text
+    //alert(editor.txt.text())
+    function clickbbslist(id) {
+
+    }
+
+    function clickcolumn(id) {
+        if (id == "all") {
+            location.replace("../../main/BBSMain");
+            return;
+        } else {
+            location.replace("../../main/BBSMain?columnid=" + id);
+        }
+    }
+    QJGlobalVar.defmenu = "3";
+
+    function jiejing(s_userguid) {
+        var retObj = AjaxRequest.pubpostsend({ "sendpost": "jiejing", "userguid": s_userguid });
+        if (retObj.return == "0") {
+            alert("千桔是SB!");
+            $("#userlogin").show();
+            return;
+        }
+        if (retObj.return == "-1") {
+            alert(retObj.message);
+            return;
+        } else {
+            alert("SB!");
+            location.reload();
+        }
+
+    }
+    //type="all" 所有
+    //type=""
+    function loadData(stype) {
+        $("#div_splitpage").html("");
+        $("#div_bbslist").html("");
+        var s_columnid = QianJu.PubFun.getQueryVariable("columnid");
+        if (s_columnid == "") {
+            s_columnid = "all";
+        }
+        var s_search = QianJu.PubFun.getQueryVariable("search");
+        var s_ismysend = QianJu.PubFun.getQueryVariable("ismysend");
+        var s_ismyreplay = QianJu.PubFun.getQueryVariable("ismyreplay");
+        var s_page = QianJu.PubFun.getQueryVariable("page");
+        if (s_page == "") {
+            s_page = "0";
+        };
+        if (stype=="my") {
+            s_ismysend = "1";
+        };
+        if (stype == "myrevert") {
+            s_ismyreplay = "1";
+        };
+        var retObj = AjaxRequest.pubpostsend({ "sendpost": "getBBSColumnlist" });
+
+        webMainComEx.addBBSColumn("bbs_column", retObj.data, "clickcolumn", s_columnid);
+
+
+        var jq_selecttype = $("#selettype");
+        jq_selecttype.html("");
+        for (var i = 0; i < retObj.data.length; i++) {
+            var item = retObj.data[i];
+            jq_selecttype.append('<div class="r-publish--publish_tag_item" id="' + item.columnid + '" onclick="typeclick(this);"><span>' + item.columnname + '</span></div>');
+            jq_column.push($("#" + item.columnid));
+        }
+        s_search=$("#search_input").val();
+        
+        var retObj = AjaxRequest.pubpostsend({
+            "sendpost": "getBBSManagerlist",
+            "columnid": s_columnid
+        });
+        var s_banzhulist = "";
+        if (retObj.return == "1") {
+            var datatable = retObj.data;
+            for (var i = 0; i < datatable.length; i++) {
+                var rowitem = datatable[i]
+                var dj = parseInt(rowitem.dengji);
+                var s_star = "";
+                for (var x = 0; x < dj; x++) {
+                    s_star += '<div class="bbs_div_show_star"></div>';
+                }
+                s_banzhulist += '<div style="width:280px;height:35px;float:left"><div style="width:70px;float:left;">' + rowitem.columnname + ':</div><div style="margin:5px;background:url(\'' + rowitem.faceurl + '\');width:27px;height:27px;background-size: contain;float:left;" title="' + rowitem.account + '"></div>' + s_star + '</div>';
+            }
+            $("#div_banzhulist").html(s_banzhulist);
+        }
+
+        retObj = AjaxRequest.pubpostsend({
+            "sendpost": "getbeijinglist"
+        });
+        var s_banzhulist = "";
+        if (retObj.return == "1") {
+            var datatable = retObj.data;
+            for (var i = 0; i < datatable.length; i++) {
+                var rowitem = datatable[i]
+                var dj = parseInt(rowitem.dengji);
+                var s_star = '<div style="margin-left:150px;margin-top:5px;background:url(\'../images/main/BBS/jiejing.png\');background-size:contain;width:27px;height:27px;cursor:pointer;" onclick="jiejing(\'' + rowitem.userguid+'\');"></div>';
+                s_banzhulist += '<div style="width:280px;height:35px;float:left"><div style="width:70px;float:left;">' + rowitem.account + ':</div><div style="margin:5px;background:url(\'' + rowitem.faceurl + '\');width:27px;height:27px;background-size: contain;float:left;" title="' + rowitem.account + '"></div>' + s_star + '</div>';
+            }
+            $("#div_beijinlist").html(s_banzhulist);
+        }
+
+        //加载发帖列表
+        var data = {
+            "sendpost": "getbbslist",
+            "columnid": s_columnid,
+            "search": s_search,
+            "ismysend": s_ismysend,
+            "ismyreplay": s_ismyreplay,
+            "page": s_page
+        };
+
+        var retObject = AjaxRequest.postsend(data);
+        if (retObject.return == "1") {
+            webMainComEx.addBBSList("div_bbslist", retObject.data, "clickbbslist");
+        }
+        var s_url = location.href.replace("&page=" + s_page, "");
+        var maxpage = Math.ceil(retObject.rowcount / 20);
+        var optionobj = {
+            "divid": "div_splitpage",
+            "currentpage": parseInt(s_page) + 1,
+            "maxpage": maxpage,
+            "url": s_url
+        }
+        webMainComEx.addsplistpage(optionobj);
+    };
+
+    $(document).ready(function () {
+        $(".r-community--send_btn").on("click", function () {
+            $("#div_container_bbs").show();
+        });
+
+        $(".r-community-c-forum_sender--option").on("click", function () {
+            var s_typeid = sendvalid();
+            if (s_typeid == "") {
+                alert("请选择一个发布分区!");
+                return;
+            }
+            var s_title = $(".r-community-c-forum_sender--title_input").val();
+            if (QianJu.PubFun.isNull(s_title)) {
+                alert("标题不能为空!");
+                return false;
+            }
+            var s_text = editor.txt.text();
+            if (QianJu.PubFun.isNull(s_text)) {
+                alert("内容不能为空!");
+                return false;
+            }
+            if (s_text.length < 10) {
+                alert("内容不能小于10个字符!");
+                return false;
+            }
+            
+            var s_html = editor.txt.html();
+            var data = {
+                "sendpost": "SendBBSContent",
+                "title": s_title,
+                "columnid": s_typeid,
+                "content": s_html
+            };
+            var retObj = AjaxRequest.pubpostsend(data);
+            if (retObj.return == "0" || retObj.return == "-1") {
+                alert(retObj.message);
+            } else {
+                alert(retObj.message);
+                location.reload(location.href);
+            }
+
+            var retobj = QJAjax.senddata({
+                sendpost: "../jason/getguanqq"
+            });
+            $("#div_hwlist").val("SB名单:QQ群申诉" + retobj.guanqq);
+        });
+
+        loadData("all");
+
+        $("#my-bbs").on("click", function () {
+            var retObject = AjaxRequest.postsend({ "sendpost": "GetUserLoginInfo"});
+            if (retObject.return == "0") {
+                alert("SB!");
+                return;
+            }
+            loadData("my");
+        });
+
+        $("#my-revert").on("click", function () {
+            var retObject = AjaxRequest.postsend({ "sendpost": "GetUserLoginInfo" });
+            if (retObject.return == "0") {
+                alert("SB!");
+                return;
+            }
+            loadData("myrevert");
+        });
+        $(".r-community--search_btn").on("click", function () {
+            loadData("all");
+        });
+    });
+</script>
+
+        
+        <div id="div_clientcenter"></div>
+        
+    </div>
+    <script type="text/javascript">
+        
+        function getBrowserInterfaceSize() 
+        {
+            var pageWidth = window.innerWidth;
+            var pageHeight = window.innerHeight;
+
+            if (typeof pageWidth != "number") {
+                //在标准模式下面
+                if (document.compatMode == "CSS1Compat") {
+                    pageWidth = document.documentElement.clientWidth;
+                    pageHeight = document.documentElement.clientHeight;
+                } else {
+                    pageWidth = document.body.clientWidth;
+                    pageHeight = window.body.clientHeight;
+                }
+            }
+
+            return {
+                pageWidth: pageWidth,
+                pageHeight: pageHeight
+            };
+        };
+        $(document).ready(function () {
+            var pagesize = getBrowserInterfaceSize();
+            var jq_docbody = $(document.body);
+            //jq_docbody.width(pagesize.pageWidth -20);
+            jq_docbody.height(pagesize.pageHeight);
+            if (QJPub.isphone()) {
+                jq_docbody.width(QJPub.getViewWidth());
+            };
+            //var jq_bodyfirstmain = $("#body_firstmain");
+            //if (jq_bodyfirstmain != null) {
+            //    jq_bodyfirstmain.width(jq_docbody.width());
+            //}
+            document.getElementsByTagName("title")[0].innerText = QJGlobalVar.bbstitle;
+            $('meta[name="keywords"]').attr('content', QJGlobalVar.keywords);
+            $('link[rel="icon"]').attr('href', QJGlobalVar.pageicourl);
+
+            webMainComEx.logincallback = webMainComEx.userlogin;
+        });
+
+    </script>
+</body >
+</html >
